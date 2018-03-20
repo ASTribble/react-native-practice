@@ -6,7 +6,7 @@ import {
 
 const initialState = {
   loading: false,
-  image: null,
+  image: 'https://images-api.nasa.gov/search?media_type=image&q=star',
   error: null
 };
 

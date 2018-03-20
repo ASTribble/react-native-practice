@@ -1,14 +1,14 @@
-import React from 'react';
+
 import React, { Component } from 'react';
 import {View,Image} from 'react-native';
 import {connect} from 'react-redux';
 
-import { getNasaImage } from '../New';
+import { getNasaImage } from './store/actions';
 
 export class New extends React.Component {
-  componentDidMount(){
-    this.props.dispatch(getNasaImage('moon'));
-  }
+  // componentDidMount(){
+  //   this.props.dispatch(getNasaImage('moon'));
+  // }
   
   render(){
     <View>
@@ -19,7 +19,7 @@ export class New extends React.Component {
 }
 
 const mapStateToProps = (state, props) => {
-  return console.log('state in New', state);
+  image: this.state.image
 };
 
 export default connect(mapStateToProps)(New);
